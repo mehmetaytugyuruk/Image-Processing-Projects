@@ -1,59 +1,59 @@
-# Güvenlik Kamerası - Hareket Tespit Sistemi
+# Security Camera - Motion Detection System
 
-Basit bir güvenlik kamerası uygulaması. Kameradan gelen görüntülerde hareket tespit eder ve otomatik screenshot alır.
+A simple security camera application. Detects motion in the camera feed and automatically saves a screenshot.
 
-## Özellikler
+## Features
 
-- **Gerçek zamanlı hareket tespiti**
-- **Otomatik screenshot kaydetme**
-- **Terminal bildirim sistemi**
-- **Spam koruması** (2 saniyede bir kontrol)
+- Real-time motion detection
+- Automatic screenshot saving
+- Terminal notification system
+- Spam protection (checks every 2 seconds)
 
-## Gerekli Kütüphaneler
+## Requirements
 
 ```bash
 pip install opencv-python numpy
 ```
 
-## Kullanım
+## Usage
 
-1. Kodu çalıştırın:
+1. Run the script:
 ```bash
 python security_camera.py
 ```
 
-2. Kamera açıldıktan sonra hareket edin.
+2. Move in front of the camera once it opens.
 
-3. Çıkmak için **'q'** tuşuna basın.
+3. Press **'q'** to quit.
 
-## Dosya Yapısı
+## File Structure
 
 ```
-proje/
+project/
 ├── security_camera.py
 └── screenshots/
-    ├── hareket_20240917_143052.jpg
-    ├── hareket_20240917_143125.jpg
+    ├── motion_20240917_143052.jpg
+    ├── motion_20240917_143125.jpg
     └── ...
 ```
 
-## Ayarlar
+## Settings
 
-Koddaki bu değerleri ihtiyacınıza göre değiştirebilirsiniz:
+These values in the code can be adjusted as needed:
 
-- `print_interval = 2.0` - Bildirim sıklığı (saniye)
-- `motion_detected = diff_norm > 50000` - Hareket hassasiyeti
-- `motion_text_duration = 0.10` - Yazının ekranda kalma süresi
+- `print_interval = 2.0` - notification frequency (seconds)
+- `motion_detected = diff_norm > 50000` - motion sensitivity
+- `motion_text_duration = 0.10` - how long the on-screen text stays visible
 
-## Nasıl Çalışır?
+## How It Works
 
-1. İlk frame arkaplan olarak kaydedilir
-2. Her yeni frame arkaplan ile karşılaştırılır
-3. Fark belirlenen eşiği geçerse hareket tespit edilir
-4. Screenshot otomatik olarak kaydedilir
+1. The first frame is stored as the background reference.
+2. Each new frame is compared against the background.
+3. If the difference exceeds the threshold, motion is detected.
+4. A screenshot is saved automatically.
 
-## Notlar
+## Notes
 
-- Kamera 0. index'ten açılır (varsayılan webcam)
-- Screenshots otomatik olarak `screenshots/` klasörüne kaydedilir
-- Her screenshot benzersiz tarih-saat damgası ile adlandırılır
+- The camera opens from index 0 (default webcam).
+- Screenshots are saved automatically to the `screenshots/` folder.
+- Each screenshot is named with a unique timestamp.
