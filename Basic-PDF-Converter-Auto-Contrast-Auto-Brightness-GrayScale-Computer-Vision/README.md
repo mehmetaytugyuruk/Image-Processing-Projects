@@ -1,66 +1,65 @@
-# 📝 Basit PDF Düzenleyici
+# Basic PDF Editor
 
-Bu proje, **Python** ve **Tkinter** kullanılarak geliştirilmiş basit bir masaüstü uygulamasıdır.  
-Kullanıcıların bir PDF dosyası seçmesine, seçilen dosyanın tüm sayfalarını siyah beyaza çevirmesine ve otomatik olarak parlaklık ve kontrastını artırmasına olanak tanır.
+This project is a simple desktop application built with **Python** and **Tkinter**. It lets users select a PDF file, convert all of its pages to grayscale, and automatically boost brightness and contrast.
 
 ---
 
-## 📸 Ekran Görüntüleri
+## Screenshots
 
-### Giriş (Dosya Seçim Ekranı)
+### Input (File Selection Screen)
 ![Input](input.png)
 
-### Çıktı (İşlem Sonrası)
+### Output (After Processing)
 ![Output](output.png)
 
 ---
 
-## ✨ Özellikler
+## Features
 
-- 🖱 **Kullanıcı dostu ve basit arayüz**  
-- 📂 Yerel bilgisayardan **PDF dosyası seçme**  
-- 🖤 PDF sayfalarını otomatik olarak **siyah beyaza (grayscale) dönüştürme**  
-- 🌟 Görüntü kalitesini iyileştirmek için **parlaklık ve kontrastı otomatik artırma**  
-- 💾 **İşlenmiş dosyayı** yeni bir PDF olarak kaydetme  
+- Simple, user-friendly interface
+- Select a PDF file from the local machine
+- Automatically convert PDF pages to grayscale
+- Automatically increase brightness and contrast for readability
+- Save the processed file as a new PDF
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## Installation and Usage
 
-### Gereksinimler
-- Python 3.8 veya üstü  
+### Requirements
+- Python 3.8 or newer
 
-### Adımlar
+### Steps
 
-#### 1️⃣ Projeyi Klonlayın
+#### 1. Clone the repository
 ```bash
-git clone https://github.com/KULLANICI-ADINIZ/REPO-ADINIZ.git
-cd REPO-ADINIZ
+git clone https://github.com/mehmetaytugyuruk/Image-Processing-Projects.git
+cd Image-Processing-Projects/Basic-PDF-Converter-Auto-Contrast-Auto-Brightness-GrayScale-Computer-Vision
 ```
 
-#### 2️⃣ Gerekli Kütüphaneleri Yükleyin
+#### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 3️⃣ Uygulamayı Başlatın
+#### 3. Run the application
 ```bash
-python pdf_editor.py
+python main.py
 ```
 
 ---
 
-## ⚙️ Otomatik EXE Oluşturma (GitHub Actions)
+## Automatic EXE Build (GitHub Actions)
 
-Bu proje, **main** branch'ine her kod gönderildiğinde (push) otomatik olarak bir **Windows .exe** dosyası oluşturmak için GitHub Actions kullanır.  
+This project uses GitHub Actions to automatically build a Windows `.exe` on every push to the **main** branch.
 
-### .exe Dosyasını İndirme
-1. Bu repository'nin **Actions** sekmesine gidin.  
-2. Sol menüden **"Windows icin EXE Olusturucu"** workflow'unu seçin.  
-3. Başarıyla tamamlanan son çalışmaya tıklayın.  
-4. Sayfanın altındaki **Artifacts** bölümünden **PDFDuzenleyici-Windows** adlı dosyayı indirin.  
+### Downloading the .exe
+1. Go to this repository's **Actions** tab.
+2. Select the **"Build Windows EXE"** workflow from the left menu.
+3. Click the latest successful run.
+4. Download the **PDFEditor-Windows** artifact from the bottom of the page.
 
 ---
 
-## 📜 Lisans
-Bu proje açık kaynaklıdır. Lisans bilgileri için `LICENSE` dosyasına bakın.
+## License
+This project is open source. See the `LICENSE` file for details.
