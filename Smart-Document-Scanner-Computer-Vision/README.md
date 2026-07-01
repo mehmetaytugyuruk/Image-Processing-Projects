@@ -1,65 +1,65 @@
-# Döküman Tarayıcı - Perspective Correction Tool
+# Document Scanner - Perspective Correction Tool
 
-## Örnek Çıktı
+## Example Output
 
-| Giriş (Input) | Çıkış (Output) |
+| Input | Output |
 |:---:|:---:|
-| ![Giriş Fotoğrafı](image.jpg) | ![Çıkış Fotoğrafı](scanned.jpg) |
-| *Telefon kamerası ile çekilmiş eğik döküman* | *Düzeltilmiş ve taranmış döküman* |
+| ![Input](image.jpg) | ![Output](scanned.jpg) |
+| *Document photographed at an angle with a phone camera* | *Corrected, scanned-looking document* |
 
 ---
 
-Fotoğraftaki dökümanları otomatik olarak tespit edip düz bir görünüme çeviren Python uygulaması.
+A Python application that automatically detects a document in a photo and warps it into a flat, top-down view.
 
-## Özellikler
-- **Otomatik arkaplan kaldırma** (rembg ile)
-- **Kenar tespiti** ve kontur bulma
-- **Döküman köşe noktalarını otomatik bulma**
-- **Perspective düzeltme** (bakış açısı düzeltme)
-- **Temiz taranmış döküman çıktısı**
+## Features
+- Automatic background removal (via rembg)
+- Edge and contour detection
+- Automatic detection of document corner points
+- Perspective correction
+- Clean, scanned-looking output
 
-## Gerekli Kütüphaneler
+## Requirements
 ```bash
 pip install opencv-python numpy matplotlib rembg
 ```
 
-## Kullanım
-1. `image.jpg` adında bir fotoğraf dosyasını proje klasörüne koyun
-2. Kodu çalıştırın:
+## Usage
+1. Place a photo named `image.jpg` in the project folder.
+2. Run the script:
 ```bash
 python document_scanner.py
 ```
-3. Sonuç `scanned.jpg` olarak kaydedilir
+3. The result is saved as `scanned.jpg`.
 
-## Dosya Yapısı
+## File Structure
 ```
-proje/
+project/
 ├── document_scanner.py
-├── image.jpg          # Giriş fotoğrafı
-├── scanned.jpg        # Çıkış (taranmış döküman)
-├── input_example.jpg  # Örnek giriş fotoğrafı
-└── output_example.jpg # Örnek çıkış fotoğrafı
+├── image.jpg           # input photo
+├── scanned.jpg          # output (scanned document)
+├── input_example.jpg    # example input
+└── output_example.jpg   # example output
 ```
 
-## Nasıl Çalışır?
-1. **Arkaplan Kaldırma**: rembg ile fotoğraftaki arkaplan temizlenir
-2. **Kenar Tespiti**: Canny algoritması ile kenarlar bulunur
-3. **Kontur Analizi**: En büyük dikdörtgen kontur tespit edilir
-4. **Köşe Bulma**: Dökümanın 4 köşe noktası belirlenir
-5. **Perspective Dönüşümü**: Döküman düz bir görünüme çevrilir
+## How It Works
+1. **Background removal**: `rembg` removes the background from the photo.
+2. **Edge detection**: edges are found using the Canny algorithm.
+3. **Contour analysis**: the largest rectangular contour is identified.
+4. **Corner detection**: the document's four corner points are located.
+5. **Perspective transform**: the document is warped into a flat view.
 
-## Ayarlar
-İhtiyacınıza göre bu değerleri değiştirebilirsiniz:
+## Settings
+These values can be adjusted as needed:
 ```python
-edges = cv2.Canny(removed, 50, 150)        # Kenar tespiti hassasiyeti
-epsilon = 0.02 * cv2.arcLength(hull, True) # Köşe bulma hassasiyeti
+edges = cv2.Canny(removed, 50, 150)        # edge detection sensitivity
+epsilon = 0.02 * cv2.arcLength(hull, True) # corner detection sensitivity
 ```
 
-## Notlar
-- **Giriş formatı**: JPG, PNG desteklenir
-- **Çıkış formatı**: JPG olarak kaydedilir  
-- **En iyi sonuç için**: Döküman net olmalı ve 4 köşesi görünür olmalı
-- **Arkaplan**: Karmaşık arkaplanlar otomatik olarak temizlenir
+## Notes
+- Supported input formats: JPG, PNG
+- Output is saved as JPG
+- Best results require a document with all four corners clearly visible
+- Complex backgrounds are removed automatically
 
-## Örnek Kullanım
-Telefon kamerası ile çekilmiş eğik döküman fotoğraflarını düz taranmış döküman haline getirir. Makbuz, kimlik, sertifika gibi dökümanlar için idealdir.
+## Example Use Case
+Turns an angled phone-camera photo of a document into a flat, scanned-looking image. Well suited for receipts, ID cards, and certificates.
