@@ -1,5 +1,5 @@
-# Bu workflow'un adı. GitHub Actions arayüzünde bu isimle görünecektir.
-name: Windows icin EXE Olusturucu
+# Name of this workflow. Shown under this name in the GitHub Actions UI.
+name: Build Windows EXE
 
 on:
   push:
@@ -11,27 +11,27 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Kodu indir (Checkout)
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Python 3.11'i kur
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Gerekli kütüphaneleri yükle
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pyinstaller
           pip install -r requirements.txt
 
-      - name: PyInstaller ile EXE oluştur
+      - name: Build EXE with PyInstaller
         run: |
-          pyinstaller --name "PDFDuzenleyici" --onefile --windowed --icon=NONE main.py
+          pyinstaller --name "PDFEditor" --onefile --windowed --icon=NONE main.py
 
-      - name: Olusturulan EXE'yi artifact olarak yükle
+      - name: Upload EXE as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PDFDuzenleyici-Windows
-          path: dist/PDFDuzenleyici.exe
+          name: PDFEditor-Windows
+          path: dist/PDFEditor.exe
