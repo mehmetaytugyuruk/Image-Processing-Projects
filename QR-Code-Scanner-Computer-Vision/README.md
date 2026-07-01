@@ -3,22 +3,27 @@
   <img src="output.png" alt="Output" width="300"/>
 </div>
 
-# QR Kod Tespit Projesi
+# QR Code Detection
 
-Bu proje, OpenCV kullanarak bir görüntüdeki QR kodlarını tespit eder ve çözer.
+This project uses OpenCV to detect and decode QR codes in an image.
 
-## 📋 Gereksinimler
+## Requirements
 - Python 3.x
 - OpenCV (`pip install opencv-python`)
 
-## 🚀 Kullanım
-1. `image.jpg` adlı bir resim dosyasını proje klasörüne koyun.
-2. Aşağıdaki kodu çalıştırın:
+## Usage
+1. Place an image file named `input.png` in the project folder.
+2. Run the following script:
    ```bash
-   python barcode_dedector_on_image.py
+   python barcode_detector_on_image.py
    ```
-3. Program, QR kodun etrafına kırmızı kutu çizer ve terminalde QR kod verisini gösterir.
+3. The program draws a red box around the detected QR code and prints its decoded data to the terminal.
 
-## 📂 Çıktı
-- QR kod algılanırsa pencere üzerinde kutu çizilir ve verisi yazdırılır.
-- QR kod bulunamazsa terminalde "QR kod bulunamadı." mesajı çıkar.
+A live-camera version is also available:
+```bash
+python barcode_detector_on_video.py
+```
+
+## Output
+- If a QR code is detected, a box is drawn around it and its data is printed.
+- If no QR code is found, the terminal prints "QR code not found."
