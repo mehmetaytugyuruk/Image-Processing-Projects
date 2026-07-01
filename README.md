@@ -1,7 +1,6 @@
 # Image Processing Projects
 
-This repository is a curated collection of **image processing and computer vision projects** developed in Python.  
-The projects focus primarily on **classical computer vision techniques** and practical, real-world use cases.
+This repository is a curated collection of image processing and computer vision projects developed in Python. The projects focus primarily on classical computer vision techniques and practical, real-world use cases.
 
 The goal of this repository is to demonstrate a solid understanding of:
 - Image processing fundamentals
@@ -10,9 +9,9 @@ The goal of this repository is to demonstrate a solid understanding of:
 
 ---
 
-## 📁 Projects Overview
+## Projects Overview
 
-### 🔹 Basic Security Camera (Computer Vision)
+### Basic Security Camera (Computer Vision)
 A simple security camera system that detects motion and changes in video frames using classical image processing techniques.
 
 **Key concepts:**
@@ -23,7 +22,7 @@ A simple security camera system that detects motion and changes in video frames 
 
 ---
 
-### 🔹 Smart Document Scanner
+### Smart Document Scanner
 A document scanning pipeline that automatically detects document boundaries and applies perspective transformation to obtain a clean, scanned version.
 
 **Key concepts:**
@@ -34,7 +33,7 @@ A document scanning pipeline that automatically detects document boundaries and 
 
 ---
 
-### 🔹 Color Counter Algorithm
+### Color Counter Algorithm
 An algorithm that analyzes images and counts dominant colors or specific color ranges.
 
 **Key concepts:**
@@ -45,7 +44,7 @@ An algorithm that analyzes images and counts dominant colors or specific color r
 
 ---
 
-### 🔹 PDF Converter with Auto Contrast & Brightness
+### PDF Converter with Auto Contrast & Brightness
 A tool that processes document images or PDFs by automatically adjusting contrast, brightness, and converting them to grayscale for improved readability.
 
 **Key concepts:**
@@ -56,7 +55,7 @@ A tool that processes document images or PDFs by automatically adjusting contras
 
 ---
 
-### 🔹 QR Code Scanner
+### QR Code Scanner
 A computer vision application that detects and decodes QR codes from images or live camera input.
 
 **Key concepts:**
@@ -67,27 +66,27 @@ A computer vision application that detects and decodes QR codes from images or l
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
-- **Python**
-- **OpenCV**
+- Python
+- OpenCV
 - NumPy
-- Classical Computer Vision Algorithms
+- Classical computer vision algorithms
 
 ---
 
-## 🎯 Purpose of This Repository
+## Purpose of This Repository
 
-This repository represents my **early to mid-stage computer vision work**, focusing on understanding how visual data is processed at a low level before applying deep learning approaches.
+This repository represents my early to mid-stage computer vision work, focusing on understanding how visual data is processed at a low level before applying deep learning approaches.
 
-It serves as a strong foundation for:
+It serves as a foundation for:
 - Advanced computer vision
-- Deep learning–based vision models
+- Deep learning-based vision models
 - Real-time vision systems
 
 ---
 
-## 📌 Notes
+## Notes
 
 - Each project is organized in its own folder.
 - Projects are independent and can be run separately.
@@ -95,9 +94,9 @@ It serves as a strong foundation for:
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Performance optimizations
 - Better modularization
-- Integration with deep learning–based vision pipelines
+- Integration with deep learning-based vision pipelines
 - Real-time and embedded system extensions
